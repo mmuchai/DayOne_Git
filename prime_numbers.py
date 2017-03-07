@@ -17,7 +17,7 @@ def is_prime(num):
 def list_of_prime_numbers(n):
 	"""A function that generates prime numbers from o to n, given a parameter n"""
 	prime_numbers = []
-	for num in range (2, n):
+	for num in range (2, n+1):
 		#Checks if number can only have two factors, itself and one.
 		prime_status = is_prime(num)
 		invalids = ['Negative input', 'Invalid', False]

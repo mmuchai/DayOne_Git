@@ -8,6 +8,10 @@ class TestSolution (unittest.TestCase):
 		self.assertEqual (is_prime (-5), "Negative input")
 	def test_input_is_two (self):
 		self.assertEqual (is_prime (2), 2)
+	def test_is_prime (self):
+		self.assertEqual (is_prime(3), 3)
+	def test_returns_list_of_primes(self):
+		self.assertTrue(list_of_prime_numbers(10), [3,5,7])
 	# def test_list_of_prime_numbers(self):
 	# 	self.assertTrue (list_of_prime_numbers(10), [3, 5, 7])
 	# def test_cannot_take_negative(self):
