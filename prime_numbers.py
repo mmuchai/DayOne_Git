@@ -1,22 +1,35 @@
-def solution(n):
+def is_prime(num):
+	"""Checks if num is prime"""
+	if num isPrime:
+		return num
+	return False
+
+def list_of_primes(n):
+	primes = []
+	for num in range(2,n):
+		if is_prime(num):
+			primes.append(num)
+
+
+def list_of_prime_numbers(n):
 	"""A function that generates prime numbers from o to n, given a parameter n"""
 	for num in range (2, n):
 		result = []
-		print (result)
+		#Checks if number can only have two factors, itself and one.
+		if n % num == 0:
+			continue
+		else:
+
+			result.append(num)
+			return result
 		if isinstance (num, int):
 			return True
 		else:
-			raise ValueError("Can only take positive integer")
+			print ("Can only take positive integer")
 			if num < 0:
-				raise ValueError ("Should be non_negative")
+				print ("Value should not be negative")
 			elif num < 2:
 				return False
-				''' n is not a prime number'''
-			else:
+			elif (num % 2 == 0):
+				return False
 			
-				if n % num == 0:
-					result.append(num)
-					return False
-					break
-				else:
-					return True
