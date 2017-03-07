@@ -8,6 +8,7 @@ class TestSolution (unittest.TestCase):
 		self.assertFalse(solution (-5), ValueError(("Should be non_negative")))
 	def test_must_be_integer(self):
 		self.assertTrue(solution (5), [3,5])
+		"""Fot string or boolean, raise and error"""
 	def test_list_prime_numbers_from_zero_to_n_inclusive(self):
 		self.assertTrue (solution (11), [3,5,7,11])
 	def test_should_not_be_below_two(self):
