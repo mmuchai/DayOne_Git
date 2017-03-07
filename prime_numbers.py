@@ -1,35 +1,27 @@
 def is_prime(num):
-	"""Checks if num is prime"""
-	if num isPrime:
+	"""Checks if num is a positive prime number"""
+	if num == 2:
 		return num
-	return False
-
-def list_of_primes(n):
-	primes = []
-	for num in range(2,n):
-		if is_prime(num):
-			primes.append(num)
-
+	if type (num) == int:
+		if num <= 1:
+			return ("Negative input")
+		for i in range(2,num):
+			if num % i == 0:
+				return False
+			else:
+				return num
+	else:
+		return "Invalid"
+	
 
 def list_of_prime_numbers(n):
 	"""A function that generates prime numbers from o to n, given a parameter n"""
+	prime_numbers = []
 	for num in range (2, n):
-		result = []
 		#Checks if number can only have two factors, itself and one.
-		if n % num == 0:
-			continue
+		prime_status = is_prime(num)
+		invalids = ['Negative input', 'Invalid', False]
+		if prime_status in invalids:
+			return " Invalid tests"
 		else:
-
-			result.append(num)
-			return result
-		if isinstance (num, int):
-			return True
-		else:
-			print ("Can only take positive integer")
-			if num < 0:
-				print ("Value should not be negative")
-			elif num < 2:
-				return False
-			elif (num % 2 == 0):
-				return False
-			
+			prime_numbers.append(num)
