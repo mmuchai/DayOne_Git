@@ -7,7 +7,7 @@ def is_prime(num):
 			return ("Negative input")
 		for i in range(2,num):
 			if num % i == 0:
-				return False
+				break
 			elif num % 3 == 0:
 				return False
 			else:
@@ -28,4 +28,4 @@ def list_of_prime_numbers(n):
 			return " Invalid tests"
 		else:
 			return [num for num in range (2, n+1) if is_prime(num)]
-print (list_of_prime_numbers (19))
+print (list_of_prime_numbers (119))
