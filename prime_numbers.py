@@ -12,7 +12,6 @@ def solution(n):
 			elif num < 2:
 				return False
 				''' n is not a prime number'''
-	""" Checking whether it is divisible by any other number but one and itself"""
 			else:
 			
 				if n % num == 0:
