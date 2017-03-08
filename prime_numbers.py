@@ -2,6 +2,12 @@ def is_prime(num):
 	"""Checks if num is a positive prime number"""
 	if num == 2:
 		return 2
+	elif num == 3:
+		return 3
+	elif num == 5:
+		return 5
+	elif num == 7:
+		return 7
 	elif type (num) == int:
 		if num <= 1:
 			return ("Negative input")
@@ -9,6 +15,10 @@ def is_prime(num):
 			if num % i == 0:
 				break
 			elif num % 3 == 0:
+				return False
+			elif num % 5 == 0:
+				return False
+			elif num % 7 == 0:
 				return False
 			else:
 				return num
@@ -28,7 +38,7 @@ def list_of_prime_numbers(n):
 			return " Invalid tests"
 		else:
 			return [num for num in range (2, n+1) if is_prime(num)]
-print (list_of_prime_numbers (10))
+print (list_of_prime_numbers (11))
 print (list_of_prime_numbers (22))
 print (list_of_prime_numbers (76))
 print (list_of_prime_numbers (234))
